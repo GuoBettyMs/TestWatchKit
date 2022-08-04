@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="NXm-pa-AcE">
+    <device id="watch38"/>
+    <dependencies>
+        <deployment identifier="watchOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="20006"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+    </dependencies>
+    <scenes>
+        <!--InterfaceControllerThree-->
+        <scene sceneID="LqP-lz-5Q6">
+            <objects>
+                <controller identifier="InterfaceControllerThree" id="NOy-cQ-Dba" customClass="InterfaceControllerThree" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="120" height="120" alignment="left" backgroundImage="activity-0" id="MQT-Al-ASS">
+                            <items>
+                                <picker height="30" alignment="center" verticalAlignment="center" alpha="0.59999999999999998" id="nX5-el-idw"/>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="489-mV-ZBx">
+                            <items>
+                                <imageView width="50" height="50" alignment="center" image="heart" id="RC0-bz-0VV"/>
+                                <group width="1" alignment="left" verticalAlignment="bottom" id="19e-1w-Bbn">
+                                    <items>
+                                        <button width="0.25" alignment="left" title="左右" id="zS2-p3-dzL">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                            <connections>
+                                                <action selector="planingAction" destination="NOy-cQ-Dba" id="VSQ-Bf-2TU"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.25" alignment="left" title="缩放" id="S20-8W-HYE">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                            <connections>
+                                                <action selector="zoomAction" destination="NOy-cQ-Dba" id="Rsh-SB-1bv"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.25" alignment="left" title="渐隐" id="JcA-Y3-dXL">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                            <connections>
+                                                <action selector="fadAction" destination="NOy-cQ-Dba" id="hKZ-Kp-eAa"/>
+                                            </connections>
+                                        </button>
+                                        <button width="0.25" height="1" alignment="left" title="gif" id="xJa-zx-7aj">
+                                            <fontDescription key="font" type="system" pointSize="13"/>
+                                            <connections>
+                                                <action selector="gifAction" destination="NOy-cQ-Dba" id="zoh-mH-cKP"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="backGroup" destination="MQT-Al-ASS" id="v8c-9i-P5V"/>
+                        <outlet property="image" destination="RC0-bz-0VV" id="M4P-2a-8yf"/>
+                        <outlet property="picker" destination="nX5-el-idw" id="kb9-fB-Xj9"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-120" y="195"/>
+        </scene>
+        <!--GestureRecongnizerController-->
+        <scene sceneID="IWY-az-Qn3">
+            <objects>
+                <controller identifier="GestureRecongnizerController" id="LjH-oc-ESk" customClass="GestureRecongnizerController" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label width="1" height="60" alignment="left" text="Tap" textAlignment="center" id="9Mg-pu-omI">
+                            <gestureRecognizers>
+                                <tapGestureRecognizer id="8oq-Ch-5kV">
+                                    <connections>
+                                        <action selector="tapAction:" destination="LjH-oc-ESk" id="ah6-O0-QBC"/>
+                                    </connections>
+                                </tapGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                        <label width="1" height="60" alignment="left" text="Long Press" textAlignment="center" id="dYU-e5-HRC">
+                            <gestureRecognizers>
+                                <longPressGestureRecognizer id="68r-AU-6Tg">
+                                    <connections>
+                                        <action selector="longAction:" destination="LjH-oc-ESk" id="VdD-2d-Ues"/>
+                                    </connections>
+                                </longPressGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                        <label width="1" height="60" alignment="left" text="Pan" textAlignment="center" id="1su-jd-S9q">
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="bks-n5-F5T">
+                                    <connections>
+                                        <action selector="panAction:" destination="LjH-oc-ESk" id="jJI-s6-t7l"/>
+                                    </connections>
+                                </panGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                        <label width="1" height="60" alignment="left" text="Swipe" textAlignment="center" id="coG-kV-ooJ">
+                            <gestureRecognizers>
+                                <swipeGestureRecognizer id="YMY-lc-8xr">
+                                    <connections>
+                                        <action selector="swipeAction:" destination="LjH-oc-ESk" id="AKE-ku-XVD"/>
+                                    </connections>
+                                </swipeGestureRecognizer>
+                            </gestureRecognizers>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="longL" destination="dYU-e5-HRC" id="umL-Bg-76x"/>
+                        <outlet property="panL" destination="1su-jd-S9q" id="iN7-J1-F9r"/>
+                        <outlet property="swipeL" destination="coG-kV-ooJ" id="eUs-0X-VO8"/>
+                        <outlet property="tapL" destination="9Mg-pu-omI" id="wWR-Qx-Hyd"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="537" y="539"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="Zc6-JO-asm">
+            <objects>
+                <controller id="NXm-pa-AcE" customClass="InterfaceController" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group alignment="left" contentMode="scaleAspectFill" spacing="0.0" id="Jot-CE-JZm">
+                            <items>
+                                <imageView width="56" height="56" alignment="left" image="heart" animationDuration="1" id="KHo-qp-Xpm"/>
+                                <group width="1" alignment="left" layout="vertical" id="GoE-ea-MEX">
+                                    <items>
+                                        <label width="100" alignment="left" text="Label" numberOfLines="2" id="n0Y-Y8-eOe">
+                                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                        </label>
+                                        <button height="30" alignment="left" title="Button" id="86a-YS-kcR">
+                                            <connections>
+                                                <action selector="sendMessage" destination="NXm-pa-AcE" id="RMp-HI-0FM"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="device=watch38mm" layout="horizontal"/>
+                            <variation key="device=watch42mm" layout="vertical"/>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="UAZ-qY-dJU">
+                            <items>
+                                <group width="1" alignment="left" id="lzE-wp-Z7q">
+                                    <items>
+                                        <group height="1" alignment="left" id="5pS-2j-Zyo">
+                                            <items>
+                                                <label alignment="left" text="Power" textAlignment="left" id="RrW-df-jS0">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                                <label alignment="left" text="测试机" textAlignment="left" minimumScaleFactor="0.90000000000000002" id="ULL-sQ-ZFW">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                </label>
+                                            </items>
+                                            <variation key="device=watch38mm" height="0.40000000000000002" layout="vertical"/>
+                                            <variation key="device=watch40mm" layout="vertical"/>
+                                            <variation key="device=watch41mm" layout="vertical"/>
+                                            <variation key="device=watch42mm" height="1" layout="vertical"/>
+                                            <variation key="device=watch44mm" layout="vertical"/>
+                                            <variation key="device=watch45mm" layout="vertical"/>
+                                        </group>
+                                        <button width="50" height="50" alignment="left" verticalAlignment="bottom" title="升级按钮" id="D5v-Qy-kJW">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" name="Pink"/>
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <variation key="device=watch40mm" alignment="right"/>
+                                            <variation key="device=watch41mm" alignment="right"/>
+                                            <variation key="device=watch42mm" alignment="right"/>
+                                            <variation key="device=watch44mm" alignment="right"/>
+                                            <variation key="device=watch45mm" alignment="right"/>
+                                            <connections>
+                                                <action selector="InVCThree" destination="NXm-pa-AcE" id="sXh-3I-Yc9"/>
+                                                <segue destination="NOy-cQ-Dba" kind="push" id="9jZ-Cb-Y7O"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <variation key="device=watch38mm" layout="vertical" width="0.59999999999999998"/>
+                                    <variation key="device=watch42mm" layout="horizontal" spacing="0.0" width="1"/>
+                                </group>
+                                <group width="1" alignment="left" id="xcQ-30-8Es">
+                                    <items>
+                                        <group height="1" alignment="left" id="krA-Af-QxU">
+                                            <items>
+                                                <label alignment="left" text="80%" id="MkL-k6-dqV">
+                                                    <color key="textColor" red="0.1019607843" green="0.46274509800000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    <variation key="device=watch38mm" alignment="right"/>
+                                                </label>
+                                                <label alignment="left" text="充电中" id="2hJ-7a-SFH">
+                                                    <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    <variation key="device=watch38mm" alignment="right"/>
+                                                </label>
+                                            </items>
+                                            <variation key="device=watch38mm" alignment="right" height="0.40000000000000002" layout="vertical"/>
+                                            <variation key="device=watch40mm" layout="vertical"/>
+                                            <variation key="device=watch41mm" layout="vertical"/>
+                                            <variation key="device=watch42mm" height="1" layout="vertical"/>
+                                            <variation key="device=watch44mm" layout="vertical"/>
+                                            <variation key="device=watch45mm" layout="vertical"/>
+                                        </group>
+                                        <button width="50" height="50" alignment="right" verticalAlignment="bottom" title="开机按钮" id="5Jx-9D-WCd">
+                                            <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="font" type="system" pointSize="14"/>
+                                            <connections>
+                                                <action selector="InVCTwo" destination="NXm-pa-AcE" id="bUO-HC-JbS"/>
+                                                <segue destination="Swe-db-5du" kind="push" id="ZOD-NH-eOQ"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                    <variation key="device=watch38mm" alignment="right" layout="vertical" width="0.40000000000000002"/>
+                                    <variation key="device=watch42mm" alignment="left" layout="horizontal" width="1"/>
+                                </group>
+                            </items>
+                            <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                            <variation key="device=watch38mm" layout="horizontal"/>
+                            <variation key="device=watch42mm" layout="vertical"/>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="comeBackL" destination="n0Y-Y8-eOe" id="3J1-yX-GxF"/>
+                        <outlet property="eletricityL" destination="MkL-k6-dqV" id="Mgs-jz-vjT"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="37" y="-265.5"/>
+        </scene>
+        <!--AlertStyleController-->
+        <scene sceneID="EZ5-ib-A6w">
+            <objects>
+                <controller identifier="AlertStyleController" id="UKN-3i-mTw" customClass="AlertStyleController" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" id="w3M-da-dyp">
+                            <items>
+                                <button width="1" alignment="left" title="Alert" id="6rk-LE-2Vj">
+                                    <connections>
+                                        <action selector="AlertStyleController" destination="UKN-3i-mTw" id="QCG-R3-Mr2"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="SideBySide" id="OzU-Sm-5Ok">
+                                    <connections>
+                                        <action selector="sideBySideAction" destination="UKN-3i-mTw" id="tRX-bb-x25"/>
+                                    </connections>
+                                </button>
+                                <button width="1" alignment="left" title="Sheet" id="Mgq-hq-Eay">
+                                    <connections>
+                                        <action selector="sheeetAction" destination="UKN-3i-mTw" id="KGJ-RF-RWw"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                    </items>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="537" y="160"/>
+        </scene>
+        <!--InterfaceControllerTwo-->
+        <scene sceneID="Y0o-AG-pX5">
+            <objects>
+                <controller identifier="InterfaceControllerTwo" id="Swe-db-5du" customClass="InterfaceControllerTwo" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <label alignment="left" text="WKInterfaceTable" minimumScaleFactor="0.59999999999999998" id="khK-ne-JsX">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <table alignment="left" id="JwG-Sx-AkJ">
+                            <items>
+                                <tableRow identifier="TableRowController" id="J88-nj-jZ3" customClass="TableRowController" customModule="WatchAppTest_WatchKit_App" customModuleProvider="target">
+                                    <group key="rootItem" width="1" height="44" alignment="left" layout="vertical" id="YDT-P3-jFZ">
+                                        <items>
+                                            <label alignment="left" text="Label" id="Vh4-Q0-ycl"/>
+                                            <label alignment="left" text="Label" id="ADe-AB-CYT"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="numberL" destination="ADe-AB-CYT" id="Wqp-AB-GIx"/>
+                                        <outlet property="titleL" destination="Vh4-Q0-ycl" id="dmA-wu-cIz"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                        <separator alignment="left" id="Q47-vk-nBG"/>
+                        <label alignment="left" text="2.WKInterfacePicker" minimumScaleFactor="0.69999999999999996" id="1rz-jc-hSV">
+                            <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                        </label>
+                        <picker height="100" alignment="left" id="FzI-2n-rkr">
+                            <connections>
+                                <action selector="listPickerSelect:" destination="Swe-db-5du" id="wj8-8S-NkE"/>
+                            </connections>
+                        </picker>
+                        <picker height="100" alignment="left" style="stack" focusStyle="stack" id="xyh-m5-eaw">
+                            <connections>
+                                <action selector="stackPickerSelect:" destination="Swe-db-5du" id="n4h-1T-3TW"/>
+                            </connections>
+                        </picker>
+                        <picker height="100" alignment="left" style="sequence" focusStyle="sequence" id="rxW-Lw-xcK">
+                            <connections>
+                                <action selector="sequencePickerSelect:" destination="Swe-db-5du" id="JuF-eU-s9l"/>
+                            </connections>
+                        </picker>
+                    </items>
+                    <connections>
+                        <outlet property="listPicker" destination="FzI-2n-rkr" id="kCn-FT-ie4"/>
+                        <outlet property="sequencePicker" destination="rxW-Lw-xcK" id="4kc-0L-54Z"/>
+                        <outlet property="stackPicker" destination="xyh-m5-eaw" id="AVI-GH-9bS"/>
+                        <outlet property="table" destination="JwG-Sx-AkJ" id="RZ6-Ky-Qf3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="197" y="287"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="activity-0" width="280" height="280"/>
+        <image name="heart" width="50" height="50"/>
+        <namedColor name="Pink">
+            <color red="0.59999999999999998" green="0.20000000000000001" blue="1" alpha="0.60000002384185791" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
