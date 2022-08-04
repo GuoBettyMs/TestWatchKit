@@ -23,6 +23,7 @@
 		CF37CE0D289B7FD1002A913D /* InterfaceControllerThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37CE09289B7FD1002A913D /* InterfaceControllerThree.swift */; };
 		CF37CE0E289B7FD1002A913D /* GestureRecongnizerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37CE0A289B7FD1002A913D /* GestureRecongnizerController.swift */; };
 		CF37CE0F289B7FD1002A913D /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF37CE0B289B7FD1002A913D /* ExtensionDelegate.swift */; };
+		CF37CE12289B8278002A913D /* watchMainPage.png in Resources */ = {isa = PBXBuildFile; fileRef = CF37CE11289B8278002A913D /* watchMainPage.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,6 +91,7 @@
 		CF37CE09289B7FD1002A913D /* InterfaceControllerThree.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InterfaceControllerThree.swift; sourceTree = "<group>"; };
 		CF37CE0A289B7FD1002A913D /* GestureRecongnizerController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GestureRecongnizerController.swift; sourceTree = "<group>"; };
 		CF37CE0B289B7FD1002A913D /* ExtensionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		CF37CE11289B8278002A913D /* watchMainPage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = watchMainPage.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 		04E7754E24A8746600CCD284 /* WatchAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				CF37CE10289B8257002A913D /* Screenshoot */,
 				04E7754F24A8746600CCD284 /* AppDelegate.swift */,
 				04E7755324A8746600CCD284 /* ViewController.swift */,
 				04E7755824A8746700CCD284 /* Assets.xcassets */,
@@ -176,6 +179,14 @@
 				04E7757F24A8746800CCD284 /* PushNotificationPayload.apns */,
 			);
 			path = "WatchAppTest WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		CF37CE10289B8257002A913D /* Screenshoot */ = {
+			isa = PBXGroup;
+			children = (
+				CF37CE11289B8278002A913D /* watchMainPage.png */,
+			);
+			path = Screenshoot;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,6 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04E7755924A8746700CCD284 /* Assets.xcassets in Resources */,
+				CF37CE12289B8278002A913D /* watchMainPage.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
